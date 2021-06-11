@@ -8,17 +8,15 @@
 </head>
 <body>
     <h1>Welcome to our Clinic</h1>
-    @foreach ($clients as $client)
-
-    <div>Owner: {{$client->first_name}} {{$client->surname}}</div>
-    @foreach ($client->pets as $pet)
-
-    <div>{{$pet->name}}</div>
-
-    @endforeach
 
 
-    @endforeach
+<form action="{{ route('search') }}" method="GET">
+    @csrf
+    <input type="text" name="search" required/>
+    <button type="submit">Search</button>
+</form>
+
+
 
 </body>
 </html>

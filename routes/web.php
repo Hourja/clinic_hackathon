@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/api', 'clinicAPI@index');
 
 Route::get('/', 'clientController@index');
+
+Route::get('/client/{id}', 'clientController@show');
+Route::get('/client/{id}/{pet_id}', 'clientController@pet');
+
+
+Route::get('/results', 'clientController@search')->name('search');
