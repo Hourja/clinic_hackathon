@@ -68,9 +68,11 @@
             <li>Weight: {{$pet->weight}}</li>
 
     <a href="{{action('PetController@editPet',$pet->id)}}">Edit Pet</a>
-    <form action="{{action('PetController@deletePet',$pet->id)}}" method='put'>
+
+
+    <form action="{{action('PetController@deletePet',$pet->id)}}" method='post'>
 @csrf
-{{-- @method('delete') --}}
+@method('put')
 
 
 
