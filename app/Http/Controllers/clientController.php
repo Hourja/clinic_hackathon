@@ -42,7 +42,7 @@ class clientController extends Controller
 
         $client = Client::with('pets')->findOrFail($id);
         $pet = Pet::findOrFail($pet_id);
-        
+
         return view('clinic.pet')
             ->with('pet', $pet)
             ->with('client', $client);

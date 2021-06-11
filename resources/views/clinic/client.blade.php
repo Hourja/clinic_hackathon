@@ -10,6 +10,8 @@
 
     <h1>{{$client->first_name}} {{$client->surname}}</h1>
 
+<h2><a href="{{action('AdminController@edit',[$client->id])}}">Edit Owner</a></h2>
+
     <ul>
 
          @foreach($client->pets as $pet)
@@ -22,6 +24,8 @@
     </ul>
 
 <a href="{{action('clientController@index')}}">Back to home</a>
+
+
 
 
 

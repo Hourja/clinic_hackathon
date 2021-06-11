@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-     <h2>{{$pet->name}}</h2>
+     <h2>{{$pet ->name}}</h2>
           <img style="width:200px;height:auto;" src="/pets/{{$pet->photo}}" alt="">
           <li>Years: {{$pet->age}}</li>
            <li>Breed: {{$pet->breed}}</li>

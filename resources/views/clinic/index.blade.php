@@ -17,6 +17,10 @@
 </form>
 
 
+<h2><a href="{{action('AdminController@create')}}">Add new Owner</a></h2>
+
+
+
 
 </body>
 </html>

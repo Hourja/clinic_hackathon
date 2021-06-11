@@ -22,3 +22,14 @@ Route::get('/client/{id}/{pet_id}', 'clientController@pet');
 
 
 Route::get('/results', 'clientController@search')->name('search');
+
+Route::get('/clients/create', 'AdminController@create');
+Route::post('/clients', 'AdminController@store');
+Route::get('/clients/{id}/edit', 'AdminController@edit');
+Route::put('/clients/{id}', 'AdminController@update');
+
+// Route::get('/client/{id}/pet/create', 'PetController@createPet');
+Route::post('/pet/', 'PetController@storePet');
+Route::get('/pet/{id}/edit', 'PetController@editPet');
+Route::put('/pet/{id}', 'PetController@updatePet');
+Route::put('/pet/delete/{id}', 'PetController@deletePet');
