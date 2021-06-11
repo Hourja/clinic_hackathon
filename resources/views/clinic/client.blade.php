@@ -1,33 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Client</title>
-</head>
-<body>
+@extends('clinic/layouts/body',[
+'title' => 'Client Profile',
+'current_menu_item' => 'client'
+])
 
+
+@section('content')
     <h1>{{$client->first_name}} {{$client->surname}}</h1>
 
-<h2><a href="{{action('AdminController@edit',[$client->id])}}">Edit Owner</a></h2>
+<h2><a href="{{route('client-edit',[$client->id])}}">Edit Owner</a></h2>
 
     <ul>
 
          @foreach($client->pets as $pet)
-           <h2><a href="{{action('clientController@pet',[$client->id, $pet->id])}}">{{$pet->name}}</a></h2>
-
-
-           <img style="width:200px;height:auto;" src="/pets/{{$pet->photo}}" alt="">
+           <li><a href="{{route('pet',[$client->id, $pet->id])}}">{{$pet->name}}</a></li>
+           <img style="width:200px;height:auto;" src="/pets/{{$pet->photo}}" alt="pet photo">
 
          @endforeach
     </ul>
 
-<a href="{{action('clientController@index')}}">Back to home</a>
+<a href="{{route('home')}}">Back to (need to make it to results)</a>
 
-
-
-
-
-</body>
-</html>
+@endsection

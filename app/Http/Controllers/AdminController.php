@@ -60,8 +60,6 @@ class AdminController extends Controller
         return redirect()->action('AdminController@edit', [$client->id]);
     }
 
-
-
     // displays the form to edit an existing author
 
     public function edit($id)
@@ -114,20 +112,4 @@ class AdminController extends Controller
 
         return redirect()->action('AdminController@edit', [$client->id]);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

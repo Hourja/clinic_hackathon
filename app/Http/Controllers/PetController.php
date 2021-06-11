@@ -81,8 +81,8 @@ class PetController extends Controller
         // $this->validate(
         //     $request,
         //     [
-        //         'first_name' => 'required',
-        //         'surname' => 'required'
+        //         'name' => 'required',
+        //         '' => 'required'
         //     ],
         //     [
 
@@ -128,7 +128,7 @@ class PetController extends Controller
 
         $pet->delete();
         session()->flash('success_message', 'Pet deleted Successfuly');
-        
+
         return redirect()->action('AdminController@edit', [$pet->client_id]);
     }
 }

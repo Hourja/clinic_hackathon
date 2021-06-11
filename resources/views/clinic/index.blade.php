@@ -1,26 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Clinic</title>
-</head>
-<body>
-    <h1>Welcome to our Clinic</h1>
+@extends('clinic/layouts/body',[
+'title' => 'Home',
+'current_menu_item' => 'home'
+])
 
 
-<form action="{{ route('search') }}" method="GET">
+@section('content')
+
+<h1 class="homepage_heading">Welcome to our Clinic</h1>
+
+{{-- <div>Search for a client</div> --}}
+
+{{-- <form action="{{ route('search') }}" method="GET">
+
     @csrf
-    <input type="text" name="search" required/>
+
+    <input type="text" name="search" required />
+
     <button type="submit">Search</button>
-</form>
+
+</form> --}}
 
 
-<h2><a href="{{action('AdminController@create')}}">Add new Owner</a></h2>
+<div> NEWS</div>
+<div>  RANDOM PET PHOTO?</div>
 
 
 
 
-</body>
-</html>
+@endsection
