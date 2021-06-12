@@ -23,9 +23,9 @@ if (!mix.inProduction()) {
 }
 
 // define what you want to compile and how:
-mix.sass('resources/sass/app.scss', 'public/css')
+// mix.sass('resources/sass/app.scss', 'public/css')
 
-    .browserSync({
+    mix.browserSync({
         host: 'localhost',
         port: 3000,
         proxy: {

@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+@extends('clinic/layouts/body',[
+'title' => 'Edit : ' . $pet->name,
+'current_menu_item' => 'pet-page'
+])
 
+@section('content')
  @if (Session::has('success_message'))
 
     <div class="alert alert-success">
@@ -15,15 +11,65 @@
     </div>
 
  @endif
-<h2>Edit {{$pet->name}}</h2>
-<form action="{{action('PetController@updatePet',[$pet->id])}}" method="post">
+
+<h2>Editing {{$pet->name}}</h2>
+
+
+
+<form action="{{route('pet-update',[$pet->id])}}" method="post">
 @csrf
 @method('put')
 
-<label>Pet Name: <input type="text" name="name" value="{{old('name',$pet->name)}}"></label>
-<label>Breed: <input type="text" name="breed" value="{{old('breed',$pet->breed)}}"></label>
-<label>Age: <input type="number" name="age" value="{{old('age',$pet->age)}}"></label>
-<label>Weight: <input type="number" name="weight" value="{{old('weight',$pet->weight)}}"></label>
+{{-- ADDING NEW PET NAME --}}
+
+
+@component('clinic.components.form-group',[
+    'label' => 'Pet Name',
+    'name' => 'name'
+])
+<input type="text" name="name" value="{{old('name',$pet->name)}}">
+
+@endcomponent
+
+
+{{-- ADDING NEW BREED --}}
+
+
+@component('clinic.components.form-group',[
+    'label' => 'Breed',
+    'name' => 'breed'
+])
+<input type="text" name="breed" value="{{old('breed',$pet->breed)}}">
+
+@endcomponent
+
+
+
+{{-- ADDING NEW AGE --}}
+
+
+@component('clinic.components.form-group',[
+    'label' => 'Age',
+    'name' => 'age'
+])
+<input type="number" name="age" value="{{old('age',$pet->age)}}">
+
+@endcomponent
+
+
+
+{{-- ADDING WEIGHT IN KG --}}
+
+
+@component('clinic.components.form-group',[
+    'label' => 'Weight(kg)',
+    'name' => 'weight'
+])
+<input type="number" name="weight" value="{{old('weight',$pet->weight)}}">
+
+@endcomponent
+
+
 
 <input type="submit" value="save">
 
@@ -31,5 +77,4 @@
 
 
 
-</body>
-</html>
+@endsection

@@ -1,48 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+@extends('clinic/layouts/body',[
+'title' => 'Create client',
+'current_menu_item' => 'create-client'
+])
+
+
+
+@section('content')
+
 <h1>ADD NEW CLIENT</h1>
 
 
-<form action="{{action('AdminController@store')}}" method="post">
+<form action="{{route('client-store')}}" method="post">
 @csrf
 
 
 <label>
-    First Name
+    First Name :
     <input type="text" name="first_name">
 </label>
-
-<label> Surname
+<br>
+<label> Surname :
 <input type="text" name="surname">
 </label>
+
+
+
 <br>
-<input type="submit" value="Add new Client">
-<br>
-<br>
-<a href="">Add Pet</a>
-
-
-
-
-
-
-
-
-
-
-
+<input type="submit" value="Confirm">
 
 </form>
-
-
-
-
-</body>
-</html>
+@endsection

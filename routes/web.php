@@ -13,23 +13,37 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/api', 'clinicAPI@index');
+Route::get('/api', 'ClinicAPI@index')->name('database-api');
 
-Route::get('/', 'clientController@index');
+Route::get('/', 'clientController@index')->name('home');
 
-Route::get('/client/{id}', 'clientController@show');
-Route::get('/client/{id}/{pet_id}', 'clientController@pet');
+Route::get('/client/{id}', 'clientController@show')->name('client');
+Route::get('/client/{id}/{pet_id}', 'clientController@pet')->name('pet');
 
 
 Route::get('/results', 'clientController@search')->name('search');
 
-Route::get('/clients/create', 'AdminController@create');
-Route::post('/clients', 'AdminController@store');
-Route::get('/clients/{id}/edit', 'AdminController@edit');
-Route::put('/clients/{id}', 'AdminController@update');
 
-// Route::get('/client/{id}/pet/create', 'PetController@createPet');
-Route::post('/pet/', 'PetController@storePet');
-Route::get('/pet/{id}/edit', 'PetController@editPet');
-Route::put('/pet/{id}', 'PetController@updatePet');
-Route::put('/pet/delete/{id}', 'PetController@deletePet');
+
+//Client Routes
+
+Route::get('/clients/create', 'AdminController@create')->name('client-create');
+Route::post('/clients', 'AdminController@store')->name('client-store');
+Route::get('/clients/{id}/edit', 'AdminController@edit')->name('client-edit');
+Route::put('/clients/{id}', 'AdminController@update')->name('client-update');
+
+
+//Pet Routes
+
+Route::post('/pet/', 'PetController@storePet')->name('pet-store');
+Route::get('/pet/{id}/edit', 'PetController@editPet')->name('pet-edit');
+Route::put('/pet/{id}', 'PetController@updatePet')->name('pet-update');
+Route::put('/pet/delete/{id}', 'PetController@deletePet')->name('pet-delete');
+
+
+//ADDITIONAL ROUTES FOR HEADING/NAVBAR
+
+Route::get('/about_us', function () {
+
+    return view('clinic.about_us');
+})->name('about_us');
