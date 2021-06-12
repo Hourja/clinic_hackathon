@@ -80,6 +80,9 @@ YOU NEED TO PRIVE ALL CLIENTS WITH PETS TO ACCESS THEIR ID'S IN ORDER FOR THE RE
 
 {{-- DELETE PET BUTTON --}}
 
+<form action="{{route('pet-delete',$pet->id)}}" method='post'>
+@csrf
+@method('put')
 
 @component('clinic.components.form-group',[
     'label' => null,
@@ -87,9 +90,10 @@ YOU NEED TO PRIVE ALL CLIENTS WITH PETS TO ACCESS THEIR ID'S IN ORDER FOR THE RE
 ])
 
 <input type="submit" value="Delete" onClick="!confirm('Are you sure?')&& event.preventDefault()">
+</form>
 
-@endcomponent
 
 
 
 @endforeach
+@endcomponent

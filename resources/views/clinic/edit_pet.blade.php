@@ -20,7 +20,7 @@
 @csrf
 @method('put')
 
-{{-- ADDING NEW PET NAME --}}
+{{-- EDIT PET NAME --}}
 
 
 @component('clinic.components.form-group',[
@@ -32,7 +32,7 @@
 @endcomponent
 
 
-{{-- ADDING NEW BREED --}}
+{{-- EDIT BREED --}}
 
 
 @component('clinic.components.form-group',[
@@ -45,7 +45,7 @@
 
 
 
-{{-- ADDING NEW AGE --}}
+{{-- EDIT AGE --}}
 
 
 @component('clinic.components.form-group',[
@@ -58,7 +58,7 @@
 
 
 
-{{-- ADDING WEIGHT IN KG --}}
+{{-- EDIT WEIGHT IN KG --}}
 
 
 @component('clinic.components.form-group',[

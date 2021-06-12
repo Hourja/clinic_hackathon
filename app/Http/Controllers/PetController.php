@@ -57,7 +57,7 @@ class PetController extends Controller
 
         //redirect to  next page (edit)
 
-        return redirect()->action('AdminController@edit', [$pet->client_id]);
+        return redirect()->route('client-edit', [$pet->client_id]);
     }
 
 
@@ -115,7 +115,7 @@ class PetController extends Controller
 
         //redirect to  next page (edit)
 
-        return redirect()->action('AdminController@edit', [$pet->client_id]);
+        return redirect()->route('client-edit', [$pet->client_id]);
     }
 
 
@@ -129,6 +129,6 @@ class PetController extends Controller
         $pet->delete();
         session()->flash('success_message', 'Pet deleted Successfuly');
 
-        return redirect()->action('AdminController@edit', [$pet->client_id]);
+        return redirect()->route('client-edit', [$pet->client_id]);
     }
 }

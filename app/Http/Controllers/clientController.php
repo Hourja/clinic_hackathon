@@ -17,7 +17,6 @@ class clientController extends Controller
 
         $clients = Client::orderBy('first_name', 'asc')
             ->with('pets')
-            ->limit(50)
             ->get();
 
 

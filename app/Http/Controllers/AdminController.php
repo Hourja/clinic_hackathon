@@ -57,7 +57,7 @@ class AdminController extends Controller
 
         //redirect to  next page (edit)
 
-        return redirect()->action('AdminController@edit', [$client->id]);
+        return redirect()->route('client-edit', [$client->id]);
     }
 
     // displays the form to edit an existing author
@@ -110,6 +110,6 @@ class AdminController extends Controller
 
         //redirect to  next page (edit)
 
-        return redirect()->action('AdminController@edit', [$client->id]);
+        return redirect()->route('client-edit', [$client->id]);
     }
 }
