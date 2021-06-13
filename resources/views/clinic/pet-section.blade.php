@@ -11,7 +11,7 @@
     'name' => 'Pet Name'
     ])
 
-    <input type="text" name="name" placeholder="Add name">
+    <input class="form__field" type="text" name="name" placeholder="Add name">
 
     @endcomponent
 
@@ -25,7 +25,7 @@
     'name' => 'Breed'
     ])
 
-    <input type="text" name="breed" placeholder="Add breed">
+    <input class="form__field" type="text" name="breed" placeholder="Add breed">
 
     @endcomponent
 
@@ -37,7 +37,7 @@
     'name' => 'age'
     ])
 
-    <input type="text" name="age" placeholder="Add age">
+    <input class="form__field" type="text" name="age" placeholder="Add age">
 
     @endcomponent
 
@@ -50,7 +50,7 @@
     'name' => 'weight'
     ])
 
-    <input type="text" name="weight" placeholder="Add weight in kg">
+    <input class="form__field" type="text" name="weight" placeholder="Add weight in kg">
 
     @endcomponent
 
@@ -63,16 +63,15 @@
     'name' => 'photo'
     ])
 
-    <input type="file" name="photo" accept="image/*">
+    <input  type="file" name="photo" accept="image/*">
 
 
     @endcomponent
 
 
-    <input type="submit" value="save">
+    <input class="btn btn--primary" type="submit" value="Save">
 
 </form>
-
 
 
 
@@ -80,34 +79,37 @@
 YOU NEED TO PRIVE ALL CLIENTS WITH PETS TO ACCESS THEIR ID'S IN ORDER FOR THE REST OF THIS CODE TO WORK
 --}}
 
+
 @foreach($client->pets as $pet)
 
-<h2>{{$pet->name}}</h2>
-<img style="width:200px;height:auto;" src="/storage/{{$pet->photo}}" alt="">
-<li>Years: {{$pet->age}}</li>
-<li>Breed: {{$pet->breed}}</li>
-<li>Weight: {{$pet->weight}}</li>
+    <div class="pet_card">
 
-<a href="{{route('pet-edit',$pet->id)}}">Edit Pet</a>
-
-
-
-{{-- DELETE PET BUTTON --}}
-
-<form action="{{route('pet-delete',$pet->id)}}" method='post'>
-    @csrf
-    @method('put')
-
-    @component('clinic.components.form-group',[
-    'label' => null,
-    'name' => null,
-    ])
-
-    <input type="submit" value="Delete" onClick="!confirm('Are you sure?')&& event.preventDefault()">
-</form>
+        <h2>{{$pet->name}}</h2>
+        <img style="width:200px;height:auto;" src="/storage/{{$pet->photo}}" alt="">
+        <li>Years: {{$pet->age}}</li>
+        <li>Breed: {{$pet->breed}}</li>
+        <li>Weight: {{$pet->weight}}</li>
+        <form action="{{route('pet-edit',$pet->id)}}" method="get">
+            <input class="btn btn--primary" type="submit" value="Edit Pet">
+        </form>
 
 
+    {{-- DELETE PET BUTTON --}}
+
+        <form action="{{route('pet-delete',$pet->id)}}" method='post'>
+        @csrf
+        @method('put')
+
+        @component('clinic.components.form-group',[
+        'label' => null,
+        'name' => null,
+        ])
+        <input class="btn btn--primary" type="submit" value="Delete" onClick="!confirm('Are you sure?')&& event.preventDefault()">
+        @endcomponent
+        </form>
 
 
+    </div>
 @endforeach
-@endcomponent
+
+

@@ -8,8 +8,36 @@
 
 <h1 class="homepage_heading">Welcome to our Clinic</h1>
 
-<div> NEWS</div>
-<div>  RANDOM PET PHOTO?</div>
+<div class="index_news">
+
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque laudantium voluptate voluptatum omnis tempora repudiandae, atque, cum sapiente ipsum, vel excepturi impedit id nemo saepe. Provident minima est rem fuga?
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque laudantium voluptate voluptatum omnis tempora repudiandae, atque, cum sapiente ipsum, vel excepturi impedit id nemo saepe. Provident minima est rem fuga?
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque laudantium voluptate voluptatum omnis tempora repudiandae, atque, cum sapiente ipsum, vel excepturi impedit id nemo saepe. Provident minima est rem fuga?
+
+</div>
+<div class="index_news">
+
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque laudantium voluptate voluptatum omnis tempora repudiandae, atque, cum sapiente ipsum, vel excepturi impedit id nemo saepe. Provident minima est rem fuga?
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque laudantium voluptate voluptatum omnis tempora repudiandae, atque, cum sapiente ipsum, vel excepturi impedit id nemo saepe. Provident minima est rem fuga?
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque laudantium voluptate voluptatum omnis tempora repudiandae, atque, cum sapiente ipsum, vel excepturi impedit id nemo saepe. Provident minima est rem fuga?
+
+</div>
+<div class="index_news">
+
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque laudantium voluptate voluptatum omnis tempora repudiandae, atque, cum sapiente ipsum, vel excepturi impedit id nemo saepe. Provident minima est rem fuga?
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque laudantium voluptate voluptatum omnis tempora repudiandae, atque, cum sapiente ipsum, vel excepturi impedit id nemo saepe. Provident minima est rem fuga?
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque laudantium voluptate voluptatum omnis tempora repudiandae, atque, cum sapiente ipsum, vel excepturi impedit id nemo saepe. Provident minima est rem fuga?
+
+</div>
+<div class="index_news">
+
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque laudantium voluptate voluptatum omnis tempora repudiandae, atque, cum sapiente ipsum, vel excepturi impedit id nemo saepe. Provident minima est rem fuga?
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque laudantium voluptate voluptatum omnis tempora repudiandae, atque, cum sapiente ipsum, vel excepturi impedit id nemo saepe. Provident minima est rem fuga?
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque laudantium voluptate voluptatum omnis tempora repudiandae, atque, cum sapiente ipsum, vel excepturi impedit id nemo saepe. Provident minima est rem fuga?
+
+</div>
+
+
 
 
 

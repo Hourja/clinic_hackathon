@@ -1,11 +1,13 @@
-<div class="form-group">
-    <label class="form-group__label">{{$label}}</label>
+<div class="container">
+    <div class="form-group container__item">
+        <label  class="form-group__label ">{{$label}}</label>
 
-    <div class="form-group__input">
+        <div class="form-group__input">
 
-       {!!$slot!!}
+           {!!$slot!!}
 
-    </div>
+        </div>
+</div>
 
 
    @if ($errors->has($name))

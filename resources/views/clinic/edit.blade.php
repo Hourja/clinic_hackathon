@@ -30,7 +30,7 @@
     'name' => 'first_name'
 ])
 
- <input type="text" name="first_name" value="{{old('first_name',$client->first_name)}}">
+ <input class="form__field" type="text" name="first_name" value="{{old('first_name',$client->first_name)}}">
 
 @endcomponent
 
@@ -43,25 +43,33 @@
     'name' => 'surname'
 ])
 
-<input type="text" name="surname" value="{{old('surname',$client->surname)}}">
+<input class="form__field" type="text" name="surname" value="{{old('surname',$client->surname)}}">
 
 @endcomponent
 
 <br>
 
 
-<input type="submit" value="Update">
+<input class="btn btn--primary" type="submit" value="Update">
 
 
 </form>
 
 
 
+
 {{-- ADDING PET SECTION FOR EDIT --}}
+
+
 {{-- PROVIDING THE FOLLOWING PAGE WITH ALL $CLIENT --}}
 
 @include('clinic.pet-section')
 
 
 
+
+
+
 @endsection
+
+
