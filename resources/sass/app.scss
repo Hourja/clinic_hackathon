@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: #10e7dc;
+    font-family: "Roboto", sans-serif;
+}
+@import "nav_bar_animations";
+body {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    color: white;
+    header {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        padding: 1em;
+        @import "search.scss";
+
+        nav {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            a {
+                background: #10e7dc;
+                color: white;
+                font-size: 1.5em;
+            }
+        }
+    }
+}

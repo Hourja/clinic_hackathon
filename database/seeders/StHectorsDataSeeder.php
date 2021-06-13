@@ -16,7 +16,7 @@ class StHectorsDataSeeder extends Seeder
      */
     public function run()
     {
-        $json_string = file_get_contents("/home/spiros/bootcamp/hackathon_3/Vet Clinic/database/seeders/clients.json"); // replace path with a real path
+        $json_string = file_get_contents("C:\bootcamp\Projects\clinic_hackathon\database\seeders\clients.json"); // replace path with a real path
         $data = json_decode($json_string); // decode the string into data
         DB::table('clients')->truncate();
         DB::table('pets')->truncate();

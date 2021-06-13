@@ -1,5 +1,5 @@
-const mix = require('laravel-mix');
-require('dotenv').config();
+const mix = require("laravel-mix");
+require("dotenv").config();
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -12,26 +12,26 @@ require('dotenv').config();
  */
 
 mix.options({
-    processCssUrls: false
+    processCssUrls: false,
 });
 
 if (!mix.inProduction()) {
     mix.webpackConfig({
-        devtool: 'source-map'
-    })
-    .sourceMaps()
+        devtool: "source-map",
+    }).sourceMaps();
 }
 
 // define what you want to compile and how:
-// mix.sass('resources/sass/app.scss', 'public/css')
+mix.sass("resources/sass/app.scss", "public/css");
 
-    mix.browserSync({
-        host: 'localhost',
-        port: 3000,
-        proxy: {
-            target: process.env.APP_URL // Yay! Using APP_URL from the .env file!
-        }
-    });
+mix.browserSync({
+    host: "localhost",
+    port: 3000,
+    proxy: {
+        target: process.env.APP_URL, // Yay! Using APP_URL from the .env file!
+    },
+});
 
 // add versioning
 mix.version();
+mix.disableNotifications();
