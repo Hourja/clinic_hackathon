@@ -8,11 +8,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,100;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{mix('css/app.css')}}">
     <title>{{$title}}</title>
-    {{-- <style>
+    <style>
         a.current{
             text-decoration: none;
         }
-    </style> --}}
+    </style>
 </head>
 <body>
 
