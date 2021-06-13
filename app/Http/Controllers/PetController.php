@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Pet;
+
 
 class PetController extends Controller
 {
@@ -37,7 +39,6 @@ class PetController extends Controller
 
         // );
 
-
         //Prepare empty object
         $pet = new Pet;
 
@@ -48,8 +49,16 @@ class PetController extends Controller
         $pet->weight = $request->input('weight');
         $pet->client_id = $request->input('client_id');
 
+        $photo = Storage::disk('public')->put(
+            "pets",
+            $request->file('photo')
+        );
+
+        $pet->photo = $photo;
+
         //save the object
         $pet->save();
+
 
         //flash success message
         session()->flash('success_message', 'Pet Saved Successfuly');
