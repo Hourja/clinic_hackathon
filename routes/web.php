@@ -47,3 +47,11 @@ Route::get('/about_us', function () {
 
     return view('clinic.about_us');
 })->name('about_us');
+
+
+
+Route::get('/scraping',function () {
+
+    return view('scraper');
+});
+
